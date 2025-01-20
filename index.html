@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/pop-up.css" />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="sign-up-form-container">
+          <div class="info-container">
+            <h1 class="title">Stay Updated!</h1>
+            <p class="text intro-text">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="list">
+              <li class="list-item">
+                <img
+                  class="list-icon"
+                  src="/assets/images/icon-list.svg"
+                  alt="icon list"
+                />
+                <p class="text info">
+                  Product discovery and building what matters
+                </p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="list-icon"
+                  src="/assets/images/icon-list.svg"
+                  alt="icon list"
+                />
+                <p class="text info">Measuring to ensure updates are success</p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="list-icon"
+                  src="/assets/images/icon-list.svg"
+                  alt="icon list"
+                />
+                <p class="text info">And much more!</p>
+              </li>
+            </ul>
+            <!-- Form Start -->
+            <form id="sign-up-form" novalidate>
+              <label for="input">Email address</label>
+              <input
+                class="email-input"
+                type="text"
+                id="input"
+                placeholder="email@company.com"
+                required
+              />
+              <span id="error-message" class="error-message"
+                >invalid email</span
+              >
+              <button
+                type="submit"
+                class="btn confirmation-btn"
+                id="submit-btn"
+              >
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+            <!-- Form End -->
+          </div>
+          <img
+            id="dynamic-image"
+            class="image"
+            src="/assets/images/illustration-sign-up-mobile.svg"
+            alt="sign up form illustration"
+          />
+        </div>
+
+        <div id="pop-up-box-container" class="pop-up-box-container">
+          <div class="pop-up-box">
+            <div class="pop-up-mobile">
+              <img
+                class="pop-up-img"
+                src="/assets/images/icon-success.svg"
+                alt="check icon"
+              />
+              <h1 class="pop-up-box-title">Thanks for subscribing!</h1>
+              <p class="pop-up-box-text">
+                A confirmation email has been sent to
+                <span id="email"></span>. Please open it and click the button
+                inside to confirm your subscription.
+              </p>
+            </div>
+
+            <button class="btn pop-up-box-btn" id="pop-up-box-btn">
+              Dismiss message
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/index.js"></script>
+  </body>
+</html>

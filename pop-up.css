@@ -1,0 +1,104 @@
+
+.pop-up-box-container{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.724);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The classes .visible and .hidden will be toggled using JS */
+.pop-up-box-container.visible{
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up-box-container.hidden{
+  visibility: hidden;
+}
+
+.pop-up-box{
+  margin: auto;
+  height: fit-content;
+  width: 290px;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+  font-size: 20px;
+  padding: 50px;
+
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.pop-up-img{
+  margin-bottom: 30px;
+  width: 50px;
+}
+
+.pop-up-box-title{
+  margin-bottom: 30px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.pop-up-box-text{
+  margin-bottom: 30px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+span{
+  font-weight: 700;
+}
+
+
+
+
+/*Mobile Design*/
+@media (max-width: 400px) {
+
+  .pop-up-box{
+    width: 100vw;
+    height: 100vh;
+    background-color: light;
+
+    font-size: 20px;
+    padding: 0;
+  
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .pop-up-box-btn{
+    width: 85%;
+    align-self: center;
+  }
+
+  .pop-up-mobile{
+    width: 85%;
+    align-self: center;
+  }
+
+  .confirmation-btn{
+    margin-top: 35px;
+  }
+
+}

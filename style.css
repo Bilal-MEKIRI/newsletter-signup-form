@@ -1,0 +1,305 @@
+/* Importing fonts */
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+/* Desktop-first design*/
+section{
+  width: 100vw;
+  height: 100vh;
+  font-family: Roboto;
+  background-color: hsl(235, 18%, 26%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-form-container{
+  width: 50%;
+  height: 550px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.info-container{
+  width: 41%;
+  height: fit-content;
+  padding-left: 50px;
+}
+
+.title{
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.text{
+  color: hsl(235, 18%, 26%);
+}
+
+.intro-text{
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.list-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-icon{
+  margin-right: 10px;
+}
+
+
+
+label {
+  display: block;
+  margin-top: 35px;
+  color: hsl(234, 29%, 20%);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.email-input{
+  height: 50px;
+  width: 97%;
+  border-radius: 5px;
+  border: 1px solid hsl(231, 7%, 60%);
+  padding-left: 10px;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* This class will be added dynamically to the input using JS if the email isn't valid */
+.email-input.error {
+  border-color: hsl(4, 100%, 67%);
+  background-color: #ffe6e6;
+}
+/* color of the input placeholder */
+::placeholder{
+  color: hsl(231, 7%, 60%);
+}
+
+#sign-up-form{
+  position: relative;
+}
+
+.error-message {
+  display: none; /* Hidden by default */
+  color: hsl(4, 100%, 67%);
+  font-size: 0.8em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Main style of the two buttons */
+.btn{
+  margin-top: 20px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: hsl(235, 18%, 26%);
+}
+
+.btn:active{
+  cursor: pointer;
+  background-color: hsl(235, 18%, 26%);
+  opacity: 0.8;
+}
+
+.image{
+  height: 100%;
+}
+
+
+/* Responsive design with mediaqueries */
+/* Smaller desktop design */
+@media (max-width: 1460px) {
+  .sign-up-form-container{
+    width: 55%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sign-up-form-container{
+    width: 60%;
+  }
+}
+
+@media (max-width: 1275px) {
+  .sign-up-form-container{
+    width: 70%;
+  }
+}
+
+@media (max-width: 1092px) {
+
+  form {
+    width: 90%;
+  }
+
+  .sign-up-form-container{
+    width: 80%;
+  }
+
+  .info-container{
+    width: 50%;
+    padding-left: 0px;
+  }
+
+  .email-input{
+    width: 97%;
+  }
+
+  .confirmation-btn{
+    width: 100%;
+  }
+}
+
+@media (max-width: 855px) {
+  .title{
+    font-size: 45px;
+  }
+}
+
+/*Tablet design*/
+@media (max-width: 816px) {
+
+  form {
+    width: 75%;
+  }
+
+  section{
+    height: fit-content;
+  }
+
+  .sign-up-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    height: fit-content;
+  }
+
+  .image{
+    order: 1;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    object-fit: cover ;
+    object-position: center ;
+  }
+
+  .info-container{
+    order: 2;
+    width: 100%;
+  }
+
+  .confirmation-btn{
+    width: 100%;
+  }
+  
+}
+
+
+/*Mobile Design*/
+@media (max-width: 400px) {
+
+  form {
+    width: 100%;
+  }
+
+  main{
+    height: 150vh;
+  }
+
+  section{
+    width: 100vw;
+    height: 96vh;
+    margin: 0;
+  }
+
+  .sign-up-form-container{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .info-container{
+    width: 90%;
+  }
+
+  .image{
+    height: 200px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    object-position: top ;
+    object-fit: cover;
+  }
+
+  .email-input{
+    width: 90%;
+  }
+
+  .confirmation-btn{
+    width: 93%;
+  }
+}
+
+@media (max-width: 370px) {
+
+.error-message {
+    top: 80px;
+    left: 0;
+  }
+}
+
+@media (max-width: 317px) {
+
+  .title{
+    margin-bottom: 20px;
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  .error-message {
+    top: 80px;
+    left: 0;
+  }
+}
