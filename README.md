@@ -110,8 +110,8 @@ This project provided several key takeaways:
 
 ### Challenges Faced
 
-- **Creating a Custom Popup Message**
-  This was the first time I created a custom popup from scratch. Initially, I thought about using a simple `alert()`, but I quickly realized that alerts aren’t customizable and their appearance depends entirely on the browser. That wasn’t going to work for this design, so I had to build my own. I used a `div` overlay with adjustable opacity for the backdrop and added a toggle class using JavaScript to control its visibility. It was a great learning experience, and I’m happy with how it turned out!
+- **Creating a Custom Confirmation Message Overlay**
+  This was the first time I created a custom overlay from scratch. Initially, I thought about using a simple `alert()`, but I quickly realized that alerts aren’t customizable and their appearance depends entirely on the browser. That wasn’t going to work for this design, so I had to build my own. I used a `div` overlay with adjustable opacity for the backdrop and added a toggle class using JavaScript to control its visibility. It was a great learning experience, and I’m happy with how it turned out!
    
 - **Responsive Design Workflow**
   I started with a desktop-first approach, but as I worked on making the design responsive, I ended up adding too many breakpoints to adjust for smaller screens. It felt a bit messy, so I want to figure out a better way to simplify this process in the future without relying on so many media queries.
